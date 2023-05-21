@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="https://chat.openai.com/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="static/css/main.css">
     <style>
-        .right1 {
+        .right2 {
             display: none ;
         }
     </style>
@@ -28,7 +28,9 @@
                 </svg>
                 <span>New Chat</span>
             </button>
+            <div class="today text-xs mx-8 m-4 text-gray-400">Today</div>
             <div class="chats flex flex-col justify-center items-center">
+               
                 <div
                     class="chat  bg-gray-600 rounded-md cursor-pointer space-x-2 w-[90%] opacity-80 px-5 py-2 flex justify-start items-center">
                     <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
@@ -36,7 +38,7 @@
                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                     </svg>
-                    <span>Clone AI Assistant</span>
+                    <span>Question</span>
                 </div>
                 <div
                     class="chat rounded-md cursor-pointer space-x-2 w-[90%] opacity-80 px-5 py-2 flex justify-start items-center">
@@ -122,11 +124,10 @@
                 </div>
 
                 <div class="input w-full text-center my-24 ">
-                    <!-- flex items-center justify-center flex-col -->
                     <input class="w-[50%] p-3 bg-gray-600 rounded-md" placeholder="Send a message" type="text"
-                        name="text" id="">
+                        name="text" id="question">
 
-                    <button class="relative -left-16 ">
+                    <button id="sendButton" class="relative -left-16 ">
                         <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
                             stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 mr-1" height="1em" width="1em"
                             xmlns="http://www.w3.org/2000/svg">
@@ -142,23 +143,45 @@
                     </div>
                 </div>
             </div>
+
             <div class="right2 w-full flex flex-col items-center h-fit">
-                <div class="box1 flex py-7 justify-start w-[40vw] items-center space-x-6">
+                <div class="box1 m-auto flex py-7 justify-start w-[40vw] items-center space-x-6">
                     <img class="w-9" src="https://chat.openai.com/_next/image?url=https%3A%2F%2Fs.gravatar.com%2Favatar%2Fe305f9a4f46febbe73809055f3be514f%3Fs%3D480%26r%3Dpg%26d%3Dhttps%253A%252F%252Fcdn.auth0.com%252Favatars%252Fsm.png&w=48&q=75" alt="">
                     <div>The First question</div>
                 </div>
                 <div class="box2 bg-gray-600 flex py-7 justify-center w-full items-center space-x-6">
                     <div class="box w-[40vw] flex justify-start space-x-6">
-                        <img class="w-9" src="https://chat.openai.com/_next/image?url=https%3A%2F%2Fs.gravatar.com%2Favatar%2Fe305f9a4f46febbe73809055f3be514f%3Fs%3D480%26r%3Dpg%26d%3Dhttps%253A%252F%252Fcdn.auth0.com%252Favatars%252Fsm.png&w=48&q=75" alt="">
-                        <div>The First question</div>
+                        <img class="w-9 h-9" src="https://chat.openai.com/favicon.ico" alt="">
+                        <div class="fex space-y-4 flex-col">
+
+                            <div>The First question</div>
+                            <div>The First question</div>
+                        </div>
                     </div>
                 </div>
-                
-            </div>
+                <div class="input pt-72 w-full text-center mt-24 ">
+                    
+                    <input class="w-[50%] p-3 bg-gray-600 rounded-md" placeholder="Send a message" type="text"
+                        name="text" id="question">
 
-            
-        
+                    <button id="sendButton" class="relative -left-16 ">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                            stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 mr-1" height="1em" width="1em"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+
+                    <div class="text-xs py-2 pr-11 opacity-70">Free Research Preview. ChatGPT may produce inaccurate
+                        information about people, places, or facts. <a class="underline"
+                            href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes"> ChatGPT May 12
+                            Version</a>
+                    </div>
+                </div>                
+            </div>
     </div>
+    <script src="/static/js/script.js"></script>
 </body>
 
 </html>
