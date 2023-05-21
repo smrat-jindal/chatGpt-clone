@@ -11,7 +11,7 @@ def qa():
     if request.method == "POST":
         data = {"result":"Hey"}
         return  jsonify(data)
-    # return render_template("index.html")
+    # return render_template("index1.html")
     data = {"result":"Hey"}
     return  jsonify(data)
 app.run(debug=True)
