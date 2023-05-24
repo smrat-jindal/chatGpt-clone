@@ -25,6 +25,6 @@ sendButton.addEventListener("click", async ()=>{
 
     
     // getting the answer & populate it.
-    let result= await postData("/api",{"param1":questionInput})
+    let result= await postData("/api",{"question":questionInput})
     solution.innerHTML = result.answer
 })
